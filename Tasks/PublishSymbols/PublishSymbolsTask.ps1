@@ -32,7 +32,7 @@ try {
             throw "Unable to generate Personal Access Token for the user. Contact Project Collection Administrator"
         }
 
-        & "$PSScriptRoot\Publish-Symbols.ps1" -SymbolServiceUri $symbolServiceUri -RequestName $requestName -SourcePath $sourcePath -PersonalAccessToken $personalAccessToken -Verbose:$detailedLog
+        & "$PSScriptRoot\Publish-Symbols.ps1" -SymbolServiceUri $symbolServiceUri -RequestName $requestName -SourcePath $sourcePath -PersonalAccessToken $personalAccessToken -Verbose:$detailedLog -ExpirationInDays 3653
     }
     else
     {
